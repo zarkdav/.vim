@@ -106,3 +106,6 @@
 [submodule "bundle/vcscommand.vim"]
 	path = bundle/vcscommand.vim
 	url = git://github.com/vim-scripts/vcscommand.vim.git
+[submodule "bundle/Gundo"]
+	path = bundle/Gundo
+	url = git://github.com/vim-scripts/Gundo.git
