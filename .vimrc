@@ -59,6 +59,8 @@ set ruler
 set cursorline
 set showtabline=2
 set wildmenu
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/,CVS*
 
 set showmode
 set pastetoggle=<F2>
