@@ -187,6 +187,15 @@ else
      echoerr "Sorry, this version of (g)vim was not compiled with +multi_byte"
 endif
 
+" Session save/restore
+nmap SQ <ESC>:mksession! .vimsession<CR>:wqa<CR>
+function! RestoreSession()
+    if argc() == 0 && filereadable('.vimsession') "vim called without arguments
+        execute 'source .vimsession'
+    end
+endfunction
+autocmd VimEnter * call RestoreSession()
+
 if has('unix')
     language messages C
 else
