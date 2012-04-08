@@ -66,8 +66,10 @@ set scrolloff=3
 set laststatus=2
 
 " Persistant undo file, awesome when used with Gundo
-set undofile
-set undodir=~/.vim/undo
+if v:version >= 730
+    set undofile
+    set undodir=~/.vim/undo
+endif
 
 set tabline=%!MyTabLine()
 "
