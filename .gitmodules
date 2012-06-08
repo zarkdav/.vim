@@ -109,3 +109,6 @@
 [submodule "bundle/Gundo"]
 	path = bundle/Gundo
 	url = git://github.com/vim-scripts/Gundo.git
+[submodule "bundle/vim-ref"]
+	path = bundle/vim-ref
+	url = git://github.com/thinca/vim-ref.git
