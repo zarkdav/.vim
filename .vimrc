@@ -6,7 +6,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 set t_Co=256
-colorscheme molokai
+colorscheme lucius
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
 set background=dark
