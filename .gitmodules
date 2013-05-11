@@ -112,3 +112,6 @@
 [submodule "bundle/vim-ref"]
 	path = bundle/vim-ref
 	url = git://github.com/thinca/vim-ref.git
+[submodule "bundle/vim-lucius"]
+	path = bundle/vim-lucius
+	url = https://github.com/jonathanfilip/vim-lucius
