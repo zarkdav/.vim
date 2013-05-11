@@ -178,7 +178,7 @@ if has("multi_byte")
      setglobal fileencoding=utf-8           " empty is also OK (defaults to same as 'encoding'). Or you may want to set one of the ucs encodings (which
                                             " may use less disk space if you use only "alphabetic" scripts such as Latin, Greek, Cyrillic, Hebrew or Arabic, and
                                             " not "ideographic" scripts like Chinese, Japanese or Korean. With the ucs encodings it is usually better
-     set bomb                               " to also set 'bomb' on ('byte-order-mark" option, irrelevant for utf-8 but not for ucs)
+"     set bomb                               " to also set 'bomb' on ('byte-order-mark" option, irrelevant for utf-8 but not for ucs)
 "     set termencoding=iso-8859-15           " or whatever is appropriate to your locale (iso-8859-15 is Latin1 + Euro currency sign)
 "     set fileencodings=ucs-bom,iso-8859-15,iso-8859-3,utf-8
      set fileencodings=ucs-bom,utf-8,cp850
