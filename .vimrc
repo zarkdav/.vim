@@ -18,9 +18,9 @@ if v:version < '703' || !has('python')
 endif
 
 if v:version < '702'
-    call add(g:pathogen_disabled, 'autocomplpop')
     call add(g:pathogen_disabled, 'fuzzyfinder')
     call add(g:pathogen_disabled, 'l9')
+    call add(g:pathogen_disabled, 'AutoComplPop')
 endif
 
 call pathogen#infect()
