@@ -112,6 +112,7 @@
 [submodule "bundle/vim-ref"]
 	path = bundle/vim-ref
 	url = git://github.com/thinca/vim-ref.git
+	ignore = untracked
 [submodule "bundle/vim-lucius"]
 	path = bundle/vim-lucius
 	url = git://github.com/jonathanfilip/vim-lucius.git
