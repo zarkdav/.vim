@@ -116,3 +116,6 @@
 [submodule "bundle/vim-lucius"]
 	path = bundle/vim-lucius
 	url = git://github.com/jonathanfilip/vim-lucius.git
+[submodule "bundle/html-template-syntax"]
+	path = bundle/html-template-syntax
+	url = https://github.com/pbrisbin/html-template-syntax.git
