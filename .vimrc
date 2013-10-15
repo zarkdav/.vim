@@ -89,10 +89,15 @@ set pastetoggle=<F2>
 set scrolloff=3
 set laststatus=2
 
+let s:vimdir='~/.vim'
+if has('win16') || has('win32') || has('win64')
+    let s:vimdir='~/vimfiles'
+endif
+
 " Persistant undo file, awesome when used with Gundo
-if v:version >= 730
+if v:version >= 703
     set undofile
-    set undodir=~/.vim/undo
+    let &undodir=s:vimdir . '/undo'
 endif
 
 set tabline=%!MyTabLine()
@@ -227,10 +232,10 @@ else
 endif
 
 " vim-force.com required variables
-let g:apex_backup_folder="~/.vim/apex/backup"
-let g:apex_temp_folder="~/.vim/apex/tmp"
-let g:apex_deployment_error_log="~/.vim/apex/error.log"
-let g:apex_properties_folder="~/.vim/apex/properties"
+let g:apex_backup_folder=s:vimdir . "/apex/backup"
+let g:apex_temp_folder=s:vimdir . "/apex/tmp"
+let g:apex_deployment_error_log=s:vimdir . "/apex/error.log"
+let g:apex_properties_folder=s:vimdir . "/apex/properties"
 runtime ftdetect/apexcode.vim
 
 let g:Powerline_symbols = 'fancy'
