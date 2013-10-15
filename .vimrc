@@ -158,8 +158,8 @@ import vim
 def EvaluateCurrentRange():
     eval(compile('\n'.join(vim.current.range),'','exec'),globals())
 EOL
+" map <C-h> :py EvaluateCurrentRange()
 endif
-map <C-h> :py EvaluateCurrentRange()
 
 "
 " Status line configuration gotten from: http://rgarciasuarez.free.fr/dotfiles/vimrc
