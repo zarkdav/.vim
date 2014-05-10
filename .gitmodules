@@ -19,9 +19,11 @@
 [submodule "bundle/snipmate.vim"]
 	path = bundle/snipmate.vim
 	url = git://github.com/msanders/snipmate.vim.git
+	ignore = untracked
 [submodule "bundle/vim-force.com"]
 	path = bundle/vim-force.com
 	url = git://github.com/neowit/vim-force.com.git
+	ignore = untracked
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
 	url = git://github.com/pangloss/vim-javascript.git
@@ -34,6 +36,7 @@
 [submodule "bundle/textile.vim"]
 	path = bundle/textile.vim
 	url = git://github.com/timcharper/textile.vim.git
+	ignore = untracked
 [submodule "bundle/gitolite"]
 	path = bundle/gitolite
 	url = git://github.com/tmatilai/gitolite.vim
@@ -52,6 +55,7 @@
 [submodule "bundle/vim-git"]
 	path = bundle/vim-git
 	url = git://github.com/tpope/vim-git.git
+	ignore = untracked
 [submodule "bundle/vim-haml"]
 	path = bundle/vim-haml
 	url = git://github.com/tpope/vim-haml.git
@@ -88,9 +92,11 @@
 [submodule "bundle/Gist.vim"]
 	path = bundle/Gist.vim
 	url = git://github.com/vim-scripts/Gist.vim.git
+	ignore = untracked
 [submodule "bundle/AutoComplPop"]
 	path = bundle/AutoComplPop
 	url = git://github.com/vim-scripts/AutoComplPop.git
+	ignore = untracked
 [submodule "bundle/IndexedSearch"]
 	path = bundle/IndexedSearch
 	url = git://github.com/vim-scripts/IndexedSearch.git
@@ -103,9 +109,11 @@
 [submodule "bundle/vcscommand.vim"]
 	path = bundle/vcscommand.vim
 	url = git://github.com/vim-scripts/vcscommand.vim.git
+	ignore = untracked
 [submodule "bundle/Gundo"]
 	path = bundle/Gundo
 	url = git://github.com/vim-scripts/Gundo.git
+	ignore = untracked
 [submodule "bundle/vim-ref"]
 	path = bundle/vim-ref
 	url = git://github.com/thinca/vim-ref.git
@@ -119,3 +127,4 @@
 [submodule "bundle/matchit.zip"]
 	path = bundle/matchit.zip
 	url = https://github.com/vim-scripts/matchit.zip.git
+	ignore = untracked
