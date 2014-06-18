@@ -27,7 +27,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 set t_Co=256
-colorscheme base16-ocean
+colorscheme seoul256
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
 set background=dark
@@ -242,3 +242,5 @@ let g:Powerline_symbols = 'fancy'
 let g:xml_syntax_folding = 1
 
 let g:lisp_rainbow=1
+
+let mapleader=","
