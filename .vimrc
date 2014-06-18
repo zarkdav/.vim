@@ -241,3 +241,5 @@ runtime ftdetect/apexcode.vim
 let g:Powerline_symbols = 'fancy'
 
 let g:xml_syntax_folding = 1
+
+let g:lisp_rainbow=1
