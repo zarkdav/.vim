@@ -136,3 +136,9 @@
 	path = bundle/paredit
 	url = https://github.com/kovisoft/paredit.git
 	ignore = untracked
+[submodule "bundle/inkpot"]
+	path = bundle/inkpot
+	url = https://github.com/ciaranm/inkpot.git
+[submodule "bundle/base16-vim"]
+	path = bundle/base16-vim
+	url = https://github.com/chriskempson/base16-vim.git
