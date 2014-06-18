@@ -132,10 +132,6 @@
 	path = bundle/slimv
 	url = https://github.com/kovisoft/slimv.git
 	ignore = untracked
-[submodule "bundle/paredit"]
-	path = bundle/paredit
-	url = https://github.com/kovisoft/paredit.git
-	ignore = untracked
 [submodule "bundle/inkpot"]
 	path = bundle/inkpot
 	url = https://github.com/ciaranm/inkpot.git
