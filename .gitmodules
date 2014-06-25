@@ -141,6 +141,6 @@
 [submodule "bundle/vim-racket"]
 	path = bundle/vim-racket
 	url = https://github.com/wlangstroth/vim-racket.git
-[submodule "/home/benjamin/.vim/bundle/seoul256.vim"]
-	path = /home/benjamin/.vim/bundle/seoul256.vim
+[submodule "bundle/seoul256.vim"]
+	path = bundle/seoul256.vim
 	url = https://github.com/junegunn/seoul256.vim.git
