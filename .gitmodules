@@ -144,3 +144,6 @@
 [submodule "bundle/seoul256.vim"]
 	path = bundle/seoul256.vim
 	url = https://github.com/junegunn/seoul256.vim.git
+[submodule "bundle/haskellmode-vim"]
+	path = bundle/haskellmode-vim
+	url = https://github.com/lukerandall/haskellmode-vim.git
