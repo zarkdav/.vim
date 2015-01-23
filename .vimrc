@@ -22,7 +22,10 @@ Bundle 'klen/python-mode'
 Bundle 'junegunn/seoul256.vim'
 Bundle 'vim-scripts/shorewall.vim'
 Bundle 'kovisoft/slimv'
-Bundle 'msanders/snipmate.vim'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle 'garbas/vim-snipmate'
+Bundle "honza/vim-snippets"
 Bundle 'ervandew/supertab'
 Bundle 'godlygeek/tabular'
 Bundle 'tomtom/tcomment_vim'
