@@ -1,52 +1,81 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-
+set nocompatible
 filetype off
 
-" To disable a plugin, add it's bundle name to the following list
-let g:pathogen_disabled = []
+" Required Vundle setup
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" for some reason the csscolor plugin is very slow when run on the terminal
-" but not in GVim, so disable it if no GUI is running
-if !has('gui_running')
-    call add(g:pathogen_disabled, 'csscolor')
+Bundle 'gmarik/Vundle.vim'
+if v:version >= '702'
+Bundle 'vim-scripts/AutoComplPop'
 endif
-
-" Gundo requires at least vim 7.3
-if v:version < '703' || !has('python')
-    call add(g:pathogen_disabled, 'gundo')
-    call add(g:pathogen_disabled, 'python-mode')
+Bundle 'vim-scripts/DirDiff.vim'
+if exists('g:github_user') && executable('git')
+Bundle 'vim-scripts/Gist.vim'
 endif
-
-if !exists('g:github_user') && !executable('git')
-    call add(g:pathogen_disabled, 'Gist.vim')
+if v:version >= '703' && has('python')
+Bundle 'vim-scripts/Gundo'
+Bundle 'klen/python-mode'
 endif
+Bundle 'vim-scripts/IndexedSearch'
+Bundle 'chriskempson/base16-vim'
+Bundle 'lukerandall/haskellmode-vim'
+Bundle 'ciaranm/inkpot'
+Bundle 'vim-scripts/jQuery'
+Bundle 'vim-scripts/matchit.zip'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'junegunn/seoul256.vim'
+Bundle 'vim-scripts/shorewall.vim'
+Bundle 'kovisoft/slimv'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle 'garbas/vim-snipmate'
+Bundle "honza/vim-snippets"
+Bundle 'ervandew/supertab'
+Bundle 'godlygeek/tabular'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'timcharper/textile.vim'
+Bundle 'vim-scripts/vcscommand.vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-cucumber'
+Bundle 'tpope/vim-endwise'
+Bundle 'neowit/vim-force.com'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-haml'
+Bundle 'pangloss/vim-javascript'
+Bundle 'leshill/vim-json'
+Bundle 'jonathanfilip/vim-lucius'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-pathogen'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'wlangstroth/vim-racket'
+Bundle 'tpope/vim-rails'
+Bundle 'thinca/vim-ref'
+Bundle 'tpope/vim-repeat'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'astashov/vim-ruby-debugger'
+Bundle 'tsaleh/vim-shoulda'
+Bundle 'tpope/vim-surround'
+Bundle 'tsaleh/vim-tmux'
+Bundle 'tpope/vim-vividchalk'
 
-if v:version < '702'
-    call add(g:pathogen_disabled, 'fuzzyfinder')
-    call add(g:pathogen_disabled, 'l9')
-    call add(g:pathogen_disabled, 'AutoComplPop')
-endif
-
-call pathogen#infect()
-call pathogen#helptags()
+call vundle#end()
 
 set t_Co=256
-"colorscheme lucius
-colorscheme solarized
+colorscheme seoul256
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
 set background=dark
 
+if has("autocmd")
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
-if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
-
 " Uncomment the following to have Vim load indentation rules and plugins
 " according to the detected filetype.
-if has("autocmd")
-    filetype plugin indent on
+  filetype plugin indent on
 endif
 
 " The following are commented out as they cause vim to behave a lot
@@ -77,7 +106,6 @@ set shiftwidth=4
 set smarttab
 set expandtab
 set autoindent
-set nocompatible
 set listchars=tab:>-,trail:-,precedes:<,extends:>
 set list
 set number
@@ -245,3 +273,7 @@ runtime ftdetect/apexcode.vim
 let g:Powerline_symbols = 'fancy'
 
 let g:xml_syntax_folding = 1
+
+let g:lisp_rainbow=1
+
+let mapleader=","
