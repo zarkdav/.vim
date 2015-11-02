@@ -2,8 +2,13 @@ set nocompatible
 filetype off
 
 " Required Vundle setup
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if has("win32") || has("win16")
+    set runtimepath+=~/vimfiles/bundle/Vundle.vim
+    call vundle#begin('~/vimfiles/bundle/')
+else
+    set runtimepath+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+endif
 
 Bundle 'gmarik/Vundle.vim'
 if v:version >= '702'
