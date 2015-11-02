@@ -17,6 +17,10 @@ if v:version < '703' || !has('python')
     call add(g:pathogen_disabled, 'python-mode')
 endif
 
+if !exists('g:github_user') && !executable('git')
+    call add(g:pathogen_disabled, 'Gist.vim')
+endif
+
 if v:version < '702'
     call add(g:pathogen_disabled, 'fuzzyfinder')
     call add(g:pathogen_disabled, 'l9')
