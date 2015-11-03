@@ -1,3 +1,4 @@
+set directory=.,$TEMP
 set nocompatible
 filetype off
 
