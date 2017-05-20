@@ -55,7 +55,7 @@ Bundle 'leshill/vim-json'
 Bundle 'jonathanfilip/vim-lucius'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-pathogen'
-Bundle 'Lokaltog/vim-powerline'
+"Bundle 'Lokaltog/vim-powerline'
 Bundle 'wlangstroth/vim-racket'
 Bundle 'tpope/vim-rails'
 Bundle 'thinca/vim-ref'
@@ -276,10 +276,14 @@ let g:apex_deployment_error_log=s:vimdir . "/apex/error.log"
 let g:apex_properties_folder=s:vimdir . "/apex/properties"
 runtime ftdetect/apexcode.vim
 
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 
 let g:xml_syntax_folding = 1
 
 let g:lisp_rainbow=1
 
 let mapleader=","
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
