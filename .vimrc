@@ -1,79 +1,160 @@
+set t_Co=256
 set directory=.,$TEMP
 set nocompatible
 filetype off
 
-" Required Vundle setup
-if has("win32") || has("win16")
-    set runtimepath+=~/vimfiles/bundle/Vundle.vim
-    call vundle#begin('~/vimfiles/bundle/')
-else
-    set runtimepath+=~/.vim/bundle/Vundle.vim
-    call vundle#begin()
-endif
+call plug#begin('~/vimfiles/plugged')
 
-Bundle 'gmarik/Vundle.vim'
 if v:version >= '702'
-Bundle 'vim-scripts/AutoComplPop'
+    Plug 'vim-scripts/AutoComplPop'
 endif
-Bundle 'vim-scripts/DirDiff.vim'
+Plug 'vim-scripts/DirDiff.vim'
 if exists('g:github_user') && executable('git')
-Bundle 'vim-scripts/Gist.vim'
+    Plug 'vim-scripts/Gist.vim'
 endif
 if v:version >= '703' && has('python')
-Bundle 'vim-scripts/Gundo'
-Bundle 'klen/python-mode'
+    Plug 'vim-scripts/Gundo'
+    Plug 'klen/python-mode'
 endif
-Bundle 'vim-scripts/IndexedSearch'
-Bundle 'chriskempson/base16-vim'
-Bundle 'lukerandall/haskellmode-vim'
-Bundle 'ciaranm/inkpot'
-Bundle 'vim-scripts/jQuery'
-Bundle 'vim-scripts/matchit.zip'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'junegunn/seoul256.vim'
-Bundle 'vim-scripts/shorewall.vim'
-Bundle 'kovisoft/slimv'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle 'garbas/vim-snipmate'
-Bundle "honza/vim-snippets"
-Bundle 'ervandew/supertab'
-Bundle 'godlygeek/tabular'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'timcharper/textile.vim'
-Bundle 'vim-scripts/vcscommand.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-endwise'
-Bundle 'neowit/vim-force.com'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-haml'
-Bundle 'pangloss/vim-javascript'
-Bundle 'leshill/vim-json'
-Bundle 'jonathanfilip/vim-lucius'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-pathogen'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'wlangstroth/vim-racket'
-Bundle 'tpope/vim-rails'
-Bundle 'thinca/vim-ref'
-Bundle 'tpope/vim-repeat'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'astashov/vim-ruby-debugger'
-Bundle 'tsaleh/vim-shoulda'
-Bundle 'tpope/vim-surround'
-Bundle 'tsaleh/vim-tmux'
-Bundle 'tpope/vim-vividchalk'
+Plug 'vim-scripts/IndexedSearch'
+Plug 'lukerandall/haskellmode-vim'
+Plug 'vim-scripts/jQuery'
+Plug 'vim-scripts/matchit.zip'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-scripts/shorewall.vim'
+Plug 'kovisoft/slimv'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
+Plug 'tomtom/tcomment_vim'
+Plug 'timcharper/textile.vim'
+Plug 'vim-scripts/vcscommand.vim'
+Plug 'tpope/vim-cucumber'
+Plug 'tpope/vim-endwise'
+Plug 'neowit/vim-force.com'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-haml'
+Plug 'pangloss/vim-javascript'
+Plug 'leshill/vim-json'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-pathogen'
+Plug 'wlangstroth/vim-racket'
+Plug 'tpope/vim-rails'
+Plug 'thinca/vim-ref'
+Plug 'tpope/vim-repeat'
+Plug 'vim-ruby/vim-ruby'
+Plug 'astashov/vim-ruby-debugger'
+Plug 'tsaleh/vim-shoulda'
+Plug 'tpope/vim-surround'
+Plug 'tsaleh/vim-tmux'
+Plug 'rakr/vim-two-firewatch'
+Plug 'xolox/vim-colorscheme-switcher'
+Plug 'xolox/vim-misc'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
-call vundle#end()
+"Plug 'vim-scripts/256-grayvim'
+"Plug 'vim-scripts/256-jungle'
+"Plug 'vim-scripts/beauty256'
+"Plug 'vim-scripts/blacklight'
+"Plug 'vim-scripts/calmar256-lightdark.vim'
+"Plug 'vim-scripts/desert256.vim'
+"Plug 'vim-scripts/donbass.vim'
+"Plug 'vim-scripts/The-Vim-Gardener'
+"Plug 'vim-scripts/icansee.vim'
+"Plug 'vim-scripts/inkpot'
+"Plug 'nanotech/jellybeans.vim'
+"Plug 'w0ng/vim-hybrid'
+"Plug 'tpope/vim-vividchalk'
+"Plug 'jnurmine/Zenburn'
+"Plug 'vim-scripts/khaki.vim'
+"Plug 'vim-scripts/lettuce.vim'
+"Plug 'vim-scripts/Liquid-Carbon'
+"Plug 'vim-scripts/leo256'
+"Plug 'lodestone/lodestone.vim'
+"Plug 'vim-scripts/Lucius'
+"Plug 'vim-scripts/lilypink'
+"Plug 'vim-scripts/pink'
+Plug 'vim-scripts/peaksea'
+"Plug 'mrkn/mrkn256.vim'
+"Plug 'tomasr/molokai'
+"Plug 'vim-scripts/miko'
+"Plug 'vim-scripts/southernlights'
+"Plug 'vim-scripts/rdark-terminal'
+"Plug 'altercation/vim-colors-solarized'
+"Plug 'vim-scripts/strange'
+"Plug 'vim-scripts/summerfruit256.vim'
+"Plug 'vim-scripts/synic.vim'
+"Plug 'vim-scripts/tabula.vim'
+"Plug 'vim-scripts/tchaba'
+"Plug 'vim-scripts/tir_black'
+"Plug 'vim-scripts/vilight.vim'
+"Plug 'vim-scripts/wombat256.vim'
+"Plug 'vim-scripts/xoria256.vim'
+"Plug 'sjl/badwolf'
+"Plug 'baskerville/bubblegum'
+"Plug 'vim-scripts/Simple256'
+"Plug 'noah/fu'
+"Plug 'vim-scripts/crt.vim'
+"Plug 'vim-scripts/colorful256.vim'
+"Plug 'vim-scripts/charged-256.vim'
+"Plug 'vim-scripts/Gentooish'
+"Plug 'vim-scripts/greenvision'
+"Plug 'nelstrom/vim-mac-classic-theme'
+"Plug 'jonathanfilip/vim-lucius'
+"Plug 'zeis/vim-kolor'
+"Plug '29decibel/codeschool-vim-theme'
+"Plug 'Lokaltog/vim-distinguished'
+"Plug 'morhetz/gruvbox'
+"Plug 'junegunn/seoul256.vim'
+"Plug 'romainl/Apprentice'
+"Plug 'whatyouhide/vim-gotham'
+"Plug 'romainl/Disciple'
+"Plug 'gosukiwi/vim-atom-dark'
+"Plug 'blerins/flattown'
+"Plug 'GertjanReynaert/cobalt2-vim-theme'
+"Plug 'ajh17/Spacegray.vim'
+"Plug 'stulzer/heroku-colorscheme'
+"Plug 'atelierbram/vim-colors_atelier-schemes'
+"Plug 'mtglsk/mushroom'
+"Plug 'fxn/vim-monochrome'
+"Plug 'justincampbell/vim-railscasts'
+"Plug 'jedverity/feral-vim'
+"Plug 'widatama/vim-phoenix'
+"Plug 'queyenth/oxeded.vim'
+"Plug 'antlypls/vim-colors-codeschool'
+"Plug 'cocopon/iceberg.vim'
+"Plug 'ChasingLogic/ChasingLogic-colorscheme-vim'
+"Plug 'sk1418/last256'
+"Plug 'baverman/vim-babymate256'
+"Plug 'noahfrederick/vim-hemisu'
+"Plug 'larssmit/vim-getafe'
+"Plug 'goatslacker/mango.vim'
+"Plug 'lxmzhv/vim'
+"Plug 'uu59/vim-herokudoc-theme'
+"Plug 'gregsexton/Muon'
+"Plug 'MaxSt/FlatColor'
+"Plug 'vim-scripts/BusyBee'
+"Plug 'vim-scripts/C64.vim'
+"Plug 'gmarik/ingretu'
+"Plug 'farseer90718/flattr.vim'
+"Plug 'duythinht/vim-coffee'
+"Plug 'reedes/vim-colors-pencil'
+"Plug 'alem0lars/vim-colorscheme-darcula'
+"Plug 'chriskempson/base16-vim'
+"Plug 'trapd00r/neverland-vim-theme'
+"Plug 'chriskempson/vim-tomorrow-theme'
+"Plug 'trusktr/seti.vim'
+call plug#end()
 
-set t_Co=256
-colorscheme seoul256
-" If using a dark background within the editing area and syntax highlighting
-" turn on this option as well
-set background=dark
+set background=dark " or light if you prefer the light version
+"let g:two_firewatch_italics=1
+"colo two-firewatch
+colorscheme peaksea
 
 if has("autocmd")
 " Uncomment the following to have Vim jump to the last position when
@@ -276,10 +357,12 @@ let g:apex_deployment_error_log=s:vimdir . "/apex/error.log"
 let g:apex_properties_folder=s:vimdir . "/apex/properties"
 runtime ftdetect/apexcode.vim
 
-let g:Powerline_symbols = 'fancy'
-
 let g:xml_syntax_folding = 1
 
 let g:lisp_rainbow=1
 
 let mapleader=","
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
