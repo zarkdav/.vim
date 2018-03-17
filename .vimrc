@@ -62,6 +62,7 @@ Plug 'rakr/vim-two-firewatch'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'xolox/vim-misc'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'hashivim/vim-terraform'
 
 "Plug 'vim-scripts/256-grayvim'
 "Plug 'vim-scripts/256-jungle'
