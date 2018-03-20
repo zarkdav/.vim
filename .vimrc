@@ -22,6 +22,7 @@ if v:version >= '703' && has('python')
     Plug 'vim-scripts/Gundo'
     Plug 'klen/python-mode'
 endif
+Plug 'pearofducks/ansible-vim'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'lukerandall/haskellmode-vim'
 Plug 'vim-scripts/jQuery'
