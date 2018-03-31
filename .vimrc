@@ -10,7 +10,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-
 if v:version >= '702'
     Plug 'vim-scripts/AutoComplPop'
 endif
@@ -23,6 +22,7 @@ if v:version >= '703' && has('python')
     Plug 'klen/python-mode'
 endif
 Plug 'pearofducks/ansible-vim'
+Plug 'Absolight/vim-bind'
 Plug 'vim-scripts/IndexedSearch'
 Plug 'lukerandall/haskellmode-vim'
 Plug 'vim-scripts/jQuery'
@@ -65,6 +65,27 @@ Plug 'xolox/vim-misc'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'hashivim/vim-terraform'
 
+" Themes
+Plug 'chriskempson/base16-vim'
+
+"Plug 'tomasr/molokai'
+"Plug 'gregsexton/Muon'
+"" Use neverland2
+"Plug 'trapd00r/neverland-vim-theme'
+"Plug 'queyenth/oxeded.vim'
+"Plug 'widatama/vim-phoenix'
+"Plug 'justincampbell/vim-railscasts'
+"Plug 'ajh17/Spacegray.vim'
+"Plug 'vim-scripts/synic.vim'
+"Plug 'vim-scripts/tchaba'
+"Plug 'chriskempson/vim-tomorrow-theme'
+"Plug 'vim-scripts/vilight.vim'
+"Plug 'vim-scripts/wombat256.vim'
+"Plug 'vim-scripts/xoria256.vim'
+"Plug 'romainl/Apprentice'
+"Plug 'atelierbram/vim-colors_atelier-schemes'
+"Plug 'gosukiwi/vim-atom-dark'
+"Plug 'baverman/vim-babymate256'
 "Plug 'vim-scripts/256-grayvim'
 "Plug 'vim-scripts/256-jungle'
 "Plug 'vim-scripts/beauty256'
@@ -87,22 +108,16 @@ Plug 'hashivim/vim-terraform'
 "Plug 'vim-scripts/Lucius'
 "Plug 'vim-scripts/lilypink'
 "Plug 'vim-scripts/pink'
-Plug 'vim-scripts/peaksea'
+"Plug 'vim-scripts/peaksea'
 "Plug 'mrkn/mrkn256.vim'
-"Plug 'tomasr/molokai'
 "Plug 'vim-scripts/miko'
 "Plug 'vim-scripts/southernlights'
 "Plug 'vim-scripts/rdark-terminal'
 "Plug 'altercation/vim-colors-solarized'
 "Plug 'vim-scripts/strange'
 "Plug 'vim-scripts/summerfruit256.vim'
-"Plug 'vim-scripts/synic.vim'
 "Plug 'vim-scripts/tabula.vim'
-"Plug 'vim-scripts/tchaba'
 "Plug 'vim-scripts/tir_black'
-"Plug 'vim-scripts/vilight.vim'
-"Plug 'vim-scripts/wombat256.vim'
-"Plug 'vim-scripts/xoria256.vim'
 "Plug 'sjl/badwolf'
 "Plug 'baskerville/bubblegum'
 "Plug 'vim-scripts/Simple256'
@@ -119,32 +134,23 @@ Plug 'vim-scripts/peaksea'
 "Plug 'Lokaltog/vim-distinguished'
 "Plug 'morhetz/gruvbox'
 "Plug 'junegunn/seoul256.vim'
-"Plug 'romainl/Apprentice'
 "Plug 'whatyouhide/vim-gotham'
 "Plug 'romainl/Disciple'
-"Plug 'gosukiwi/vim-atom-dark'
 "Plug 'blerins/flattown'
 "Plug 'GertjanReynaert/cobalt2-vim-theme'
-"Plug 'ajh17/Spacegray.vim'
 "Plug 'stulzer/heroku-colorscheme'
-"Plug 'atelierbram/vim-colors_atelier-schemes'
 "Plug 'mtglsk/mushroom'
 "Plug 'fxn/vim-monochrome'
-"Plug 'justincampbell/vim-railscasts'
 "Plug 'jedverity/feral-vim'
-"Plug 'widatama/vim-phoenix'
-"Plug 'queyenth/oxeded.vim'
 "Plug 'antlypls/vim-colors-codeschool'
 "Plug 'cocopon/iceberg.vim'
 "Plug 'ChasingLogic/ChasingLogic-colorscheme-vim'
 "Plug 'sk1418/last256'
-"Plug 'baverman/vim-babymate256'
 "Plug 'noahfrederick/vim-hemisu'
 "Plug 'larssmit/vim-getafe'
 "Plug 'goatslacker/mango.vim'
 "Plug 'lxmzhv/vim'
 "Plug 'uu59/vim-herokudoc-theme'
-"Plug 'gregsexton/Muon'
 "Plug 'MaxSt/FlatColor'
 "Plug 'vim-scripts/BusyBee'
 "Plug 'vim-scripts/C64.vim'
@@ -153,16 +159,17 @@ Plug 'vim-scripts/peaksea'
 "Plug 'duythinht/vim-coffee'
 "Plug 'reedes/vim-colors-pencil'
 "Plug 'alem0lars/vim-colorscheme-darcula'
-"Plug 'chriskempson/base16-vim'
-"Plug 'trapd00r/neverland-vim-theme'
-"Plug 'chriskempson/vim-tomorrow-theme'
 "Plug 'trusktr/seti.vim'
 call plug#end()
 
-set background=dark " or light if you prefer the light version
+"set background=dark " or light if you prefer the light version
 "let g:two_firewatch_italics=1
 "colo two-firewatch
-colorscheme peaksea
+"colorscheme base16-railscasts
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 if has("autocmd")
 " Uncomment the following to have Vim jump to the last position when
