@@ -13,7 +13,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 " From vimawesome.com
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -26,10 +26,8 @@ if !exists( "g:loaded_youcompleteme" )
     Plug 'ajh17/vimcompletesme'     " VimL completion
     Plug 'vim-scripts/AutoComplPop'
 endif
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'godlygeek/tabular'
 Plug 'sjl/gundo.vim'
 Plug 'klen/python-mode'
