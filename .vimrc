@@ -4,12 +4,13 @@ set nocompatible
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 filetype plugin indent on
 
-
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
+let hostname=system('hostname -s')
 
 call plug#begin('~/.vim/plugged')
 " From vimawesome.com
@@ -21,8 +22,9 @@ Plug 'vim-syntastic/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
-Plug 'valloric/youcompleteme'
-if !exists( "g:loaded_youcompleteme" )
+if hostname == 'deepthought'
+    Plug 'valloric/youcompleteme'
+else
     Plug 'ajh17/vimcompletesme'     " VimL completion
     Plug 'vim-scripts/AutoComplPop'
 endif
