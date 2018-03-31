@@ -1,4 +1,4 @@
-set guifont=Iosevka\ Nerd\ Font\ Mono\ Medium\ 9
+set guifont=Iosevka\ Term\ Medium\ 9
 set directory=.,$TEMP
 set nocompatible
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -28,6 +28,7 @@ else
     Plug 'ajh17/vimcompletesme'     " VimL completion
     Plug 'vim-scripts/AutoComplPop'
 endif
+Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'godlygeek/tabular'
