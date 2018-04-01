@@ -70,6 +70,7 @@ call plug#end()
 map <C-n> :NERDTreeToggle<CR>
 
 let g:airline_powerline_fonts = 1
+let g:airline_theme = 'base16_tomorrow'
 
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
@@ -153,6 +154,8 @@ function! RestoreSession()
 endfunction
 autocmd VimEnter * call RestoreSession()
 
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
 if has('unix')
     language messages C
 else
@@ -173,4 +176,15 @@ let g:lisp_rainbow=1
 let mapleader=","
 
 let g:ycm_global_ycm_extra_conf = '/usr/share/vim/vimfiles/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+
+function! s:base16_customize() abort
+  call Base16hi("MatchParen", "", g:base16_gui01, "", g:base16_cterm01, "bold,italic", "")
+  call Base16hi("Search", g:base16_gui07, g:base16_gui01, g:base16_cterm07, g:base16_cterm01, "bold,underline", "")
+endfunction
+
+augroup on_change_colorschema
+  autocmd!
+  autocmd ColorScheme * call s:base16_customize()
+augroup END
+
 hi Normal ctermbg=none
