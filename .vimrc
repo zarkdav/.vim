@@ -30,7 +30,6 @@ else
 endif
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'godlygeek/tabular'
 Plug 'sjl/gundo.vim'
 Plug 'klen/python-mode'
@@ -41,7 +40,10 @@ Plug 'will133/vim-dirdiff'
 Plug 'mattn/webapi-vim'
 Plug 'google/vim-searchindex'
 Plug 'marcweber/vim-addon-mw-utils'
+if version >= 704
 Plug 'andymass/vim-matchup'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+endif
 Plug 'xolox/vim-misc'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
