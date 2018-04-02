@@ -75,8 +75,8 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'base16_tomorrow'
 
 function! s:base16_customize() abort
-  call Base16hi("MatchParen", "", g:base16_gui01, "", g:base16_cterm01, "bold,italic", "")
-  call Base16hi("Search", g:base16_gui07, g:base16_gui01, g:base16_cterm07, g:base16_cterm01, "bold,underline", "")
+  call g:Base16hi("MatchParen", "", g:base16_gui01, "", g:base16_cterm01, "bold,italic", "")
+  call g:Base16hi("Search", g:base16_gui07, g:base16_gui01, g:base16_cterm07, g:base16_cterm01, "bold,underline", "")
 endfunction
 
 augroup on_change_colorschema
