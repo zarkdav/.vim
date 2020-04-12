@@ -42,7 +42,9 @@ Plug 'google/vim-searchindex'
 Plug 'marcweber/vim-addon-mw-utils'
 if version >= 704
 Plug 'andymass/vim-matchup'
+if has('python3')
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+endif
 endif
 Plug 'xolox/vim-misc'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
